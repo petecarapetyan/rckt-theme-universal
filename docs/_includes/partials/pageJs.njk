@@ -1,0 +1,9 @@
+{% if content.jsCode %}
+  <script type="module">
+    {{ content.jsCode | safe }}
+  </script>
+{% endif %}
+
+<script>
+  {{ '_assets/handleServiceWorker.js' | asset | toAbsPath | inlineFilePath | safe }}
+</script>
